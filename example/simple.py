@@ -1,4 +1,4 @@
-from aws_lambda_utils.utils import LambdaFunction
+from aws_lambda_utils import LambdaFunction
 
 
 class MyLambda(LambdaFunction):
