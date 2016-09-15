@@ -3,7 +3,7 @@ from aws_lambda_utils import LambdaFunction
 
 class MyLambda(LambdaFunction):
     def execute(self):
-        pass
+        self.logger.info('I am a Lambda Function')
 
 
 def lambda_handler(event, context):
