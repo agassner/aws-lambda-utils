@@ -7,8 +7,9 @@ class MyLambda(LambdaFunction):
 
 
 def lambda_handler(event, context):
-    MyLambda(__file__, event, context).execute()
+    MyLambda(__file__, event=event, context=context).call()
 
 
 if __name__ == '__main__':
-    MyLambda(__file__, {}).execute()
+    import logging
+    MyLambda(__file__, event={'key': 'value'}, context={}, logging_level=logging.DEBUG).call()

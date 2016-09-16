@@ -7,7 +7,12 @@ FAILED = "FAILED"
 
 def send(event, context, responseStatus, responseData={},
          physicalResourceId=None, logger=None):
-    responseUrl = event['ResponseURL']
+
+    responseUrl = event.get('ResponseURL')
+
+    if responseUrl is None:
+        log(logger, 'Response URL not defined, unable to send signal to Cloudformation')
+        return
 
     log(logger, responseUrl)
 
