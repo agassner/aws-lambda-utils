@@ -16,7 +16,7 @@ setup(
     long_description=long_description,
     url='https://github.com/agassner/aws-lambda-utils',
     author='Arthur Gassner',
-    author_email='@agassner',
+    author_email='arthur.gassner@gmail.com',
     license='MIT',
     classifiers=[
         'Development Status :: 4 - Beta',
